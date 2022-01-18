@@ -1,25 +1,25 @@
 `timescale 1ns / 1ps
 
 ////////////////////////////////////////////////////////////////////////////////
-// Company: 
+// Company:
 // Engineer:
 //
 // Create Date:   21:29:15 10/17/2019
 // Design Name:   BancoRegistro
 // Module Name:   C:/Users/UECCI/Documents/GitHub/SPARTAN6-ATMEGA-MAX5864/lab/lab07-BancosRgistro/bancoreg/src/TestBench.v
 // Project Name:  lab07-BancosRgistro
-// Target Device:  
-// Tool versions:  
-// Description: 
+// Target Device:
+// Tool versions:
+// Description:
 //
 // Verilog Test Fixture created by ISE for module: BancoRegistro
 //
 // Dependencies:
-// 
+//
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
-// 
+//
 ////////////////////////////////////////////////////////////////////////////////
 
 module TestBench;
@@ -39,14 +39,14 @@ module TestBench;
 
 	// Instantiate the Unit Under Test (UUT)
 	BancoRegistro uut (
-		.addrRa(addrRa), 
-		.addrRb(addrRb), 
-		.datOutRa(datOutRa), 
-		.datOutRb(datOutRb), 
-		.addrW(addrW), 
-		.datW(datW), 
-		.RegWrite(RegWrite), 
-		.clk(clk), 
+		.addrRa(addrRa),
+		.addrRb(addrRb),
+		.datOutRa(datOutRa),
+		.datOutRb(datOutRb),
+		.addrW(addrW),
+		.datW(datW),
+		.RegWrite(RegWrite),
+		.clk(clk),
 		.rst(rst)
 	);
 
@@ -66,10 +66,6 @@ module TestBench;
 			#5 addrRb=addrRa+8;
 			 $display("el valor de registro %d =  %d y %d = %d", addrRa,datOutRa,addrRb,datOutRb) ;
     end
-	 
-		
-		
 	end
-      
-endmodule
 
+endmodule

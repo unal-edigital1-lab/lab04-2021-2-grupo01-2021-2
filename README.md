@@ -136,7 +136,6 @@ module TestBench;
     for (addrRa = 0; addrRa < 4; addrRa = addrRa + 1) begin
 		//Lectura registros
 			#5000 addrRb=addrRa+4;
-
 		end
 		// Escritura
 		#5000

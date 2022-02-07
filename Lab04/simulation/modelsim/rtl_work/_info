@@ -1,0 +1,124 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/simulation/modelsim
+vBancoRegistro
+Z1 !s110 1644267206
+!i10b 1
+!s100 YgF>moU4z[kSRR:]WbZ2a1
+IDof8f=Li:c^Ozc[h?>z0K1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1644265567
+8D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/BancoRegistro.v
+FD:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/BancoRegistro.v
+L0 21
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1644267206.000000
+!s107 D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/BancoRegistro.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src|D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/BancoRegistro.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src
+Z7 tCvgOpt 0
+n@banco@registro
+vBCDtoSSeg
+R1
+!i10b 1
+!s100 BXjzEoQY[??UPlFM`;K`D3
+IL^29=dhHD=NCWno7:@^CP3
+R2
+R0
+w1643756431
+8D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/BCDtoSSeg.v
+FD:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/BCDtoSSeg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/BCDtoSSeg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src|D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/BCDtoSSeg.v|
+!i113 1
+R5
+R6
+R7
+n@b@c@dto@s@seg
+vdisplay
+R1
+!i10b 1
+!s100 YWZOzPD7=8K5`2oXL=0dY2
+I?UHelSD@_D:;nJ@9@5BR92
+R2
+R0
+w1644266827
+8D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/display.v
+FD:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/display.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/display.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src|D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/display.v|
+!i113 1
+R5
+R6
+R7
+vLab04
+R1
+!i10b 1
+!s100 OjkmXTP]K?S0k@Z@E>5Ud2
+IlPGOHWjono<4Ik80g8H]Q3
+R2
+R0
+w1644265934
+8D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/Lab04.v
+FD:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/Lab04.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/Lab04.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04|D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/Lab04.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04
+R7
+n@lab04
+vTestBench
+R1
+!i10b 1
+!s100 S7XU99nE=VS12b>H;PFFb2
+IdQHnYBJ^PBgXVcXXaX_D]1
+R2
+R0
+w1644265450
+8D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/../src/TestBench.v
+FD:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/../src/TestBench.v
+L0 25
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/../src/TestBench.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/../src|D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/../src/TestBench.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/../src
+R7
+n@test@bench

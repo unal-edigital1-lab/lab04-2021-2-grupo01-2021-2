@@ -1,0 +1,113 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "sseg[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg[0]",
+					"strict" : false
+				},
+				{
+					"name" : "an[0]",
+					"strict" : false
+				},
+				{
+					"name" : "an[1]",
+					"strict" : false
+				},
+				{
+					"name" : "addrRa[0]",
+					"strict" : false
+				},
+				{
+					"name" : "addrRb[0]",
+					"strict" : false
+				},
+				{
+					"name" : "addrRa[1]",
+					"strict" : false
+				},
+				{
+					"name" : "addrRb[1]",
+					"strict" : false
+				},
+				{
+					"name" : "addrRa[2]",
+					"strict" : false
+				},
+				{
+					"name" : "addrRb[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "datW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "addrW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RegWrite",
+					"strict" : false
+				},
+				{
+					"name" : "addrW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "addrW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "addrW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "datW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "datW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "datW[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

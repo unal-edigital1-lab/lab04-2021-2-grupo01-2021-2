@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module BancoRegistro #(      		 //   #( Parametros
-         parameter BIT_ADDR = 8,  //   BIT_ADDR Número de bit para la dirección
+         parameter BIT_ADDR = 3,  //   BIT_ADDR Número de bit para la dirección
          parameter BIT_DATO = 4  //  BIT_DATO  Número de bit para el dato
 	)
 	(
@@ -42,17 +42,25 @@ localparam NREG = 2 ** BIT_ADDR;
   
 //configiración del banco de registro 
 reg [BIT_DATO-1: 0] breg [NREG-1:0];
-
+reg [BIT_DATO-1: 0] save [NREG-1:0];
 
 assign  datOutRa = breg[addrRa];
 assign  datOutRb = breg[addrRb];
+integer i;
+
+initial begin
+	$readmemh("D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/Reg.txt",breg);
+	$readmemh("D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/Reg.txt",save);
+end
+
 
 always @(posedge clk) begin
-	if (RegWrite == 1)
-     breg[addrW] <= datW;
-  end
-
-
-
+	if(rst==1)
+		for(i=0; i<NREG;i=i+1) begin
+			breg[i] <= save[i];
+		end
+	else if (RegWrite == 1)
+		breg[addrW] <= datW;
+	end
 endmodule
 

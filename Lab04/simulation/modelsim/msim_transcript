@@ -12,59 +12,59 @@
 # 
 # vlog -vlog01compat -work work +incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src {D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/display.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:53:26 on Feb 07,2022
+# Start time: 17:18:56 on Feb 07,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src" D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/display.v 
 # -- Compiling module display
 # 
 # Top level modules:
 # 	display
-# End time: 15:53:26 on Feb 07,2022, Elapsed time: 0:00:00
+# End time: 17:18:56 on Feb 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src {D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/BCDtoSSeg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:53:26 on Feb 07,2022
+# Start time: 17:18:56 on Feb 07,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src" D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/BCDtoSSeg.v 
 # -- Compiling module BCDtoSSeg
 # 
 # Top level modules:
 # 	BCDtoSSeg
-# End time: 15:53:26 on Feb 07,2022, Elapsed time: 0:00:00
+# End time: 17:18:56 on Feb 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04 {D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/Lab04.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:53:26 on Feb 07,2022
+# Start time: 17:18:56 on Feb 07,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04" D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/Lab04.v 
 # -- Compiling module Lab04
 # 
 # Top level modules:
 # 	Lab04
-# End time: 15:53:26 on Feb 07,2022, Elapsed time: 0:00:00
+# End time: 17:18:57 on Feb 07,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src {D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/BancoRegistro.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:53:26 on Feb 07,2022
+# Start time: 17:18:57 on Feb 07,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src" D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/BancoRegistro.v 
 # -- Compiling module BancoRegistro
 # 
 # Top level modules:
 # 	BancoRegistro
-# End time: 15:53:26 on Feb 07,2022, Elapsed time: 0:00:00
+# End time: 17:18:57 on Feb 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/../src {D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/../src/TestBench.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:53:26 on Feb 07,2022
+# Start time: 17:18:57 on Feb 07,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/../src" D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/../src/TestBench.v 
 # -- Compiling module TestBench
 # 
 # Top level modules:
 # 	TestBench
-# End time: 15:53:26 on Feb 07,2022, Elapsed time: 0:00:00
+# End time: 17:18:57 on Feb 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  TestBench
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" TestBench 
-# Start time: 15:53:26 on Feb 07,2022
+# Start time: 17:18:57 on Feb 07,2022
 # Loading work.TestBench
 # Loading work.Lab04
 # Loading work.BancoRegistro
@@ -86,6 +86,6 @@
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # Break key hit
-# Break in Module BancoRegistro in file D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/BancoRegistro.v
-# End time: 15:56:04 on Feb 07,2022, Elapsed time: 0:02:38
+# Simulation stop requested.
+# End time: 17:45:42 on Feb 07,2022, Elapsed time: 0:26:45
 # Errors: 0, Warnings: 4

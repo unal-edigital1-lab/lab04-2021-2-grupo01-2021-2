@@ -137,7 +137,7 @@ module TestBench;
 		//Lectura registros
 			#5000 addrRb=addrRa+4;
 		end
-		
+
 		// Escritura
 		#5000
 		// Se activa la escritura
@@ -161,3 +161,4 @@ module TestBench;
 
 endmodule
 ```
+![Lectura](figures/TB1.png)

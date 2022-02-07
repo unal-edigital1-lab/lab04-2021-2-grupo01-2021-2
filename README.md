@@ -88,5 +88,76 @@ endmodule
 
 Para poner a prueba el banco de datos se tiene
 ```verilog
+module TestBench;
 
+	// Registros
+	reg [2:0] addrRa;
+	reg [2:0] addrRb;
+	reg [3:0] addrW;
+	reg [3:0] datW;
+	reg RegWrite;
+	reg clk;
+	reg rst;
+
+
+	wire [0:6] sseg;
+	wire [3:0] an;
+	integer i;
+
+	// Outputs
+	wire [0:6] datOutRa;
+	wire [3:0] datOutRb;
+
+	// Instantiate the Unit Under Test (UUT)
+	Lab04 uut (
+		.addrRa(addrRa),
+		.addrRb(addrRb),
+		.addrW(addrW),
+		.datW(datW),
+		.RegWrite(RegWrite),
+		.clk(clk),
+		.rst(rst),
+		.sseg(sseg),
+		.an(an)
+	);
+	initial begin
+		// Initialize Inputs
+		addrRa = 0;
+		addrRb = 0;
+		addrW = 0;
+		datW = 0;
+		RegWrite = 0;
+		clk = 0;
+		rst = 0;
+
+		/// Wait 100 ns for global reset to finish
+		#100;
+
+    for (addrRa = 0; addrRa < 4; addrRa = addrRa + 1) begin
+		//Lectura registros
+			#5000 addrRb=addrRa+4;
+
+		end
+		// Escritura
+		#5000
+		// Se activa la escritura
+		RegWrite=1;
+		//Se indica la direccion de escritura
+		addrW=7;
+		for(i=0; i<9;i=i+1) begin
+		  #5000 datW=i;
+		end
+
+	  // Reset
+		#1000
+		rst=1;
+		#25;
+		rst=0;
+		#25;
+
+	 end
+
+	 always #1 clk = ~clk;
+
+endmodule
 ```

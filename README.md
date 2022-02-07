@@ -169,4 +169,11 @@ Para el estudio de resultados se tiene que
 ![Lectura](figures/TB1.png)
 
 
-*Escritura 
+* Escritura: Se observa el resultado cuando _i_ cambia de valor.
+Enfocados en el valor que aparece en _sseg_ cuando _i_ tiene valores de 2 y 3, observando el cambio de dato que hay.
+
+![Escritura](figures/TB2.png)
+
+* Reset: Se observa que en el pequeño pulso de _reset_ los valores vuelven a como se determinaron en un incio. Se señala que en el display 1110 Se tiene el mismo valor que se observó al inicio de la prueba.
+
+![Reset](figures/TB3.png)

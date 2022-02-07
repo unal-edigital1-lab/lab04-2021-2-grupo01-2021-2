@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dD:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/simulation/modelsim
 vBancoRegistro
-Z1 !s110 1644272337
+Z1 !s110 1644276051
 !i10b 1
 !s100 Boa8d5A5o?EZWmBlg;?T?3
 I1Hi8;J411GKn;aEe:hUGD2
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1644272337.000000
+Z4 !s108 1644276051.000000
 !s107 D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/BancoRegistro.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src|D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/BancoRegistro.v|
 !i113 1
@@ -32,7 +32,7 @@ Z6 !s92 -vlog01compat -work work +incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2
 Z7 tCvgOpt 0
 n@banco@registro
 vBCDtoSSeg
-Z8 !s110 1644272336
+R1
 !i10b 1
 !s100 BXjzEoQY[??UPlFM`;K`D3
 IL^29=dhHD=NCWno7:@^CP3
@@ -46,7 +46,7 @@ R3
 r1
 !s85 0
 31
-Z9 !s108 1644272336.000000
+Z8 !s108 1644276050.000000
 !s107 D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/BCDtoSSeg.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src|D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/BCDtoSSeg.v|
 !i113 1
@@ -55,7 +55,7 @@ R6
 R7
 n@b@c@dto@s@seg
 vdisplay
-R8
+!s110 1644276050
 !i10b 1
 !s100 YWZOzPD7=8K5`2oXL=0dY2
 I?UHelSD@_D:;nJ@9@5BR92
@@ -69,7 +69,7 @@ R3
 r1
 !s85 0
 31
-R9
+R8
 !s107 D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/display.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src|D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/src/display.v|
 !i113 1
@@ -91,7 +91,7 @@ R3
 r1
 !s85 0
 31
-R9
+R4
 !s107 D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/Lab04.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04|D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/Lab04.v|
 !i113 1

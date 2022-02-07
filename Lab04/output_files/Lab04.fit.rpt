@@ -1,5 +1,5 @@
 Fitter report for Lab04
-Mon Feb 07 15:49:00 2022
+Mon Feb 07 16:20:33 2022
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon Feb 07 15:49:00 2022       ;
+; Fitter Status                      ; Successful - Mon Feb 07 16:20:33 2022       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; Lab04                                       ;
 ; Top-level Entity Name              ; Lab04                                       ;
@@ -157,7 +157,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.4%      ;
+;     Processor 2            ;   0.4%      ;
+;     Processors 3-12        ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -1173,8 +1174,8 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/output_files/Lab04.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 6092 megabytes
-    Info: Processing ended: Mon Feb 07 15:49:00 2022
-    Info: Elapsed time: 00:00:08
+    Info: Processing ended: Mon Feb 07 16:20:34 2022
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:11
 
 

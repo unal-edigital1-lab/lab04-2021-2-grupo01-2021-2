@@ -4,8 +4,83 @@
 * Javier Santiago Giraldo Jiménez
 * Valentina Quiroga Gonzalez
 ## Desarrollo
+Se busca un banco de registros implementado en la FPGA
+El trabajo del grupo consiste en crear un archivo tipo ¨Top¨ que permita integrar los archivos previamente dados en el paquete de trabajo que permitan hacer la implementación en forma de lenguaje de descripción de Hardware. Se instancian tanto el banco de registros como el display. Adicionalmente se mustran los resultados del diseño tanto por TestBench.
 
 
+### Código del banco de registro
 
+```verilog
+module BancoRegistro #(      		 //   #( Parametros
+         parameter BIT_ADDR = 3,  //   BIT_ADDR Número de bit para la dirección
+         parameter BIT_DATO = 4  //  BIT_DATO  Número de bit para el dato
+	)
+	(
+    //entradas y salidas
+    //Direcciones de registro
+    input [BIT_ADDR-1:0] addrRa,
+    input [BIT_ADDR-1:0] addrRb,
+    //Dato de salida
+    output [BIT_DATO-1:0] datOutRa,
+    output [BIT_DATO-1:0] datOutRb,
 
-Escriba la documentación respectiva
+    input [BIT_ADDR:0] addrW,//dirección de escritura
+    input [BIT_DATO-1:0] datW,//Dato de entrada
+
+    input RegWrite,//control de escritura del banco
+    input clk,
+    input rst//botón de reset- reinicio, el banco vuelve a su estado por default
+    );
+
+// La cantdiad de registros es igual a:
+localparam NREG = 2 ** BIT_ADDR;
+localparam datRST=1;//Dato guardado por defecto
+
+//configiración del banco de registro
+reg [BIT_DATO-1: 0] breg [NREG-1:0];
+reg [BIT_DATO-1: 0] save [NREG-1:0];
+
+assign  datOutRa = breg[addrRa];
+assign  datOutRb = breg[addrRb];
+integer i;
+
+initial begin //Lectura inicial de datos de un archivo externo--Precarga del archivo
+	$readmemh("D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/Reg.txt",breg);
+	$readmemh("D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/Reg.txt",save);
+end
+
+always @(posedge clk) begin
+	if(rst==1)//verifica estado de reset
+	for(i=0; i<NREG;i=i+1) begin
+		breg[i] <= save[i];//Asigna el valor por defecto
+	end
+	else if (RegWrite == 1)//verifica el enable de registro
+		breg[addrW] <= datW;//asigna el dato
+end
+endmodule
+```
+Al inicio del código se parametriza el tamaño y la cantidad de registros.
+El control de escritura es implementado como un enable para que se registre el dato en la dirección dada.
+
+### Código top
+```verilog
+module Lab04(
+  //entradas y salidas
+	output [0:6] sseg,
+	output [3:0] an,
+	input [3:0] addrRa,
+	input [3:0] addrRb,
+	input [3:0] addrW,
+	input [3:0] datW,
+	input RegWrite,
+	input clk,
+	input rst);
+	//Conexión entre el banco de registro y el display
+	wire [3:0] datOutRa;
+	wire [3:0] datOutRb;
+	//Instanciaciones
+	BancoRegistro banco(.addrRa(addrRa),.addrRb(addrRb),.datOutRa(datOutRa),.datOutRb(datOutRb),.addrW(addrW),.datW(datW),.RegWrite(RegWrite),.clk(clk),.rst(rst));//banco de registro
+	display display(.numA(datOutRa),.numB(datOutRb),.clk(clk),.sseg(sseg),.an(an),.rst(rst));//display
+
+endmodule
+```

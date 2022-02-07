@@ -39,6 +39,7 @@ module BancoRegistro #(      		 //   #( Parametros
 
 // La cantdiad de registros es igual a: 
 localparam NREG = 2 ** BIT_ADDR;
+localparam datRST=4;
   
 //configiración del banco de registro 
 reg [BIT_DATO-1: 0] breg [NREG-1:0];
@@ -48,19 +49,22 @@ assign  datOutRa = breg[addrRa];
 assign  datOutRb = breg[addrRb];
 integer i;
 
+
 initial begin
 	$readmemh("D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/Reg.txt",breg);
 	$readmemh("D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/Reg.txt",save);
 end
 
 
+
 always @(posedge clk) begin
 	if(rst==1)
-		for(i=0; i<NREG;i=i+1) begin
-			breg[i] <= save[i];
-		end
+	for(i=0; i<NREG;i=i+1) begin
+		breg[i] <= save[i];
+	end
 	else if (RegWrite == 1)
 		breg[addrW] <= datW;
-	end
+end
 endmodule
+
 

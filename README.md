@@ -84,3 +84,9 @@ module Lab04(
 
 endmodule
 ```
+## TestBench: Resultados en simulación
+
+Para poner a prueba el banco de datos se tiene
+```verilog
+
+```

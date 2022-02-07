@@ -165,4 +165,8 @@ Para el estudio de resultados se tiene que
 * Lectura: Se observa el inicio del TestBench la salida de cada display.
   - Para el caso del display 1110 se tiene que el dato almacenado pasando del 7seg es 0.
   - Para el caso del display 1101 se tiene que el dato almacenado pasando del 7seg es 5.
+
 ![Lectura](figures/TB1.png)
+
+
+*Escritura 

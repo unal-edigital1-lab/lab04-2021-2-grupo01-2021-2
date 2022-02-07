@@ -4,8 +4,8 @@
 * Javier Santiago Giraldo Jiménez
 * Valentina Quiroga Gonzalez
 ## Desarrollo
-Se busca un banco de registros implementado en la FPGA
-El trabajo del grupo consiste en crear un archivo tipo ¨Top¨ que permita integrar los archivos previamente dados en el paquete de trabajo que permitan hacer la implementación en forma de lenguaje de descripción de Hardware. Se instancian tanto el banco de registros como el display. Adicionalmente se mustran los resultados del diseño tanto por TestBench.
+Se busca un banco de registros implementado en la FPGA.
+El trabajo del grupo consiste en crear un archivo tipo ¨Top¨ que permita integrar los archivos previamente dados en el paquete de trabajo que permitan hacer la implementación en forma de lenguaje de descripción de Hardware. Se instancian tanto el banco de registros como el display. Adicionalmente se muestran los resultados del diseño tanto por TestBench.
 
 
 ### Código del banco de registro
@@ -16,27 +16,27 @@ module BancoRegistro #(      		 //   #( Parametros
          parameter BIT_DATO = 4  //  BIT_DATO  Número de bit para el dato
 	)
 	(
-    //entradas y salidas
-    //Direcciones de registro
+    // Entradas y salidas
+    // Direcciones de registro
     input [BIT_ADDR-1:0] addrRa,
     input [BIT_ADDR-1:0] addrRb,
-    //Dato de salida
+    // Dato de salida
     output [BIT_DATO-1:0] datOutRa,
     output [BIT_DATO-1:0] datOutRb,
 
-    input [BIT_ADDR:0] addrW,//dirección de escritura
-    input [BIT_DATO-1:0] datW,//Dato de entrada
+    input [BIT_ADDR:0] addrW, // Dirección de escritura
+    input [BIT_DATO-1:0] datW, // Dato de entrada
 
-    input RegWrite,//control de escritura del banco
+    input RegWrite, // Control de escritura del banco
     input clk,
-    input rst//botón de reset- reinicio, el banco vuelve a su estado por default
+    input rst // Botón de reset- reinicio, el banco vuelve a su estado por default
     );
 
 // La cantdiad de registros es igual a:
 localparam NREG = 2 ** BIT_ADDR;
-localparam datRST=1;//Dato guardado por defecto
+localparam datRST=1; // Dato guardado por defecto
 
-//configiración del banco de registro
+// Configuración del banco de registro
 reg [BIT_DATO-1: 0] breg [NREG-1:0];
 reg [BIT_DATO-1: 0] save [NREG-1:0];
 
@@ -44,18 +44,18 @@ assign  datOutRa = breg[addrRa];
 assign  datOutRb = breg[addrRb];
 integer i;
 
-initial begin //Lectura inicial de datos de un archivo externo--Precarga del archivo
+initial begin // Lectura inicial de datos de un archivo externo--Precarga del archivo
 	$readmemh("D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/Reg.txt",breg);
 	$readmemh("D:/Users/jsgj2/Documents/GitHub/lab04-2021-2-grupo01-2021-2/Lab04/Reg.txt",save);
 end
 
 always @(posedge clk) begin
-	if(rst==1)//verifica estado de reset
+	if(rst==1) // Verifica estado de reset
 	for(i=0; i<NREG;i=i+1) begin
-		breg[i] <= save[i];//Asigna el valor por defecto
+		breg[i] <= save[i]; // Asigna el valor por defecto
 	end
-	else if (RegWrite == 1)//verifica el enable de registro
-		breg[addrW] <= datW;//asigna el dato
+	else if (RegWrite == 1) // Verifica el enable de registro
+		breg[addrW] <= datW; // Asigna el dato
 end
 endmodule
 ```
@@ -65,7 +65,7 @@ El control de escritura es implementado como un enable para que se registre el d
 ### Código top
 ```verilog
 module Lab04(
-  //entradas y salidas
+  // Entradas y salidas
 	output [0:6] sseg,
 	output [3:0] an,
 	input [3:0] addrRa,
@@ -75,10 +75,10 @@ module Lab04(
 	input RegWrite,
 	input clk,
 	input rst);
-	//Conexión entre el banco de registro y el display
+	// Conexión entre el banco de registro y el display
 	wire [3:0] datOutRa;
 	wire [3:0] datOutRb;
-	//Instanciaciones
+	// Instanciaciones
 	BancoRegistro banco(.addrRa(addrRa),.addrRb(addrRb),.datOutRa(datOutRa),.datOutRb(datOutRb),.addrW(addrW),.datW(datW),.RegWrite(RegWrite),.clk(clk),.rst(rst));//banco de registro
 	display display(.numA(datOutRa),.numB(datOutRb),.clk(clk),.sseg(sseg),.an(an),.rst(rst));//display
 
@@ -86,7 +86,8 @@ endmodule
 ```
 ## TestBench: Resultados en simulación
 
-Para poner a prueba el banco de datos se tiene
+Para poner a prueba el banco de datos se tiene:
+
 ```verilog
 module TestBench;
 
@@ -142,7 +143,7 @@ module TestBench;
 		#5000
 		// Se activa la escritura
 		RegWrite=1;
-		//Se indica la direccion de escritura
+		// Se indica la direccion de escritura
 		addrW=7;
 		for(i=0; i<9;i=i+1) begin
 		  #5000 datW=i;
@@ -161,7 +162,7 @@ module TestBench;
 
 endmodule
 ```
-Para el estudio de resultados se tiene que
+Para el estudio de resultados se tiene que:
 * Lectura: Se observa el inicio del TestBench la salida de cada display.
   - Para el caso del display 1110 se tiene que el dato almacenado pasando del 7seg es 0.
   - Para el caso del display 1101 se tiene que el dato almacenado pasando del 7seg es 5.

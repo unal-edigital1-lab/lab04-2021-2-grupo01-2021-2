@@ -12,22 +12,22 @@ El trabajo del grupo consiste en crear un archivo tipo ¨Top¨ que permita integ
 
 ```verilog
 module BancoRegistro #(      		 //   #( Parametros
-         parameter BIT_ADDR = 3,  //   BIT_ADDR Número de bit para la dirección
+         parameter BIT_ADDR = 4,  //   BIT_ADDR Número de bit para la dirección
          parameter BIT_DATO = 4  //  BIT_DATO  Número de bit para el dato
 	)
 	(
     // Entradas y salidas
     // Direcciones de registro
-    input [BIT_ADDR-1:0] addrRa,
-    input [BIT_ADDR-1:0] addrRb,
+    input [BIT_ADDR-1:0] addrRa,//4 bits dirección registro A
+    input [BIT_ADDR-1:0] addrRb,//4 bits dirección registro B
     // Dato de salida
-    output [BIT_DATO-1:0] datOutRa,
-    output [BIT_DATO-1:0] datOutRb,
+    output [BIT_DATO-1:0] datOutRa,//4 bits registro A
+    output [BIT_DATO-1:0] datOutRb,//4 bits registro B
 
     input [BIT_ADDR:0] addrW, // Dirección de escritura
     input [BIT_DATO-1:0] datW, // Dato de entrada
 
-    input RegWrite, // Control de escritura del banco
+    input RegWrite, // Control de escritura del banco - Permite escribir el dato en el registro
     input clk,
     input rst // Botón de reset- reinicio, el banco vuelve a su estado por default
     );
@@ -66,7 +66,7 @@ El control de escritura es implementado como un enable para que se registre el d
 ```verilog
 module Lab04(
   // Entradas y salidas
-	output [0:6] sseg,
+	output [6:0] sseg,
 	output [3:0] an,
 	input [3:0] addrRa,
 	input [3:0] addrRb,
@@ -92,8 +92,8 @@ Para poner a prueba el banco de datos se tiene:
 module TestBench;
 
 	// Registros
-	reg [2:0] addrRa;
-	reg [2:0] addrRb;
+	reg [3:0] addrRa;
+	reg [3:0] addrRb;
 	reg [3:0] addrW;
 	reg [3:0] datW;
 	reg RegWrite;

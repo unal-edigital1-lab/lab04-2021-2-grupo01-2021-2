@@ -4,7 +4,7 @@
 * Javier Santiago Giraldo Jiménez
 * Valentina Quiroga Gonzalez
 ## Desarrollo
-Se busca un banco de registros implementado en la FPGA.
+Se busca diseñar un banco de registros implementado en la FPGA.
 El trabajo del grupo consiste en crear un archivo tipo ¨Top¨ que permita integrar los archivos previamente dados en el paquete de trabajo que permitan hacer la implementación en forma de lenguaje de descripción de Hardware. Se instancian tanto el banco de registros como el display. Adicionalmente se muestran los resultados del diseño tanto por TestBench.
 
 
